@@ -6,7 +6,7 @@ import java.lang.Exception
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
-class LoginInterceptor : HandlerInterceptor {
+open class LoginInterceptor : HandlerInterceptor {
     override fun preHandle(request: HttpServletRequest?, response: HttpServletResponse?, handler: Any?): Boolean {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
