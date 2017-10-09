@@ -13,8 +13,7 @@ class Controller{
 
     @PostMapping("/api/downloader")
     fun submitUril(url : String) : String {
-
-        TODO("return task id")
+        return "download mission confirmed" + url
     }
 
     @GetMapping("/api/downloader/query")
