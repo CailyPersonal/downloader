@@ -15,7 +15,7 @@ class Controller{
 
     @GetMapping("/api/downloader/query")
     fun getProcess(@RequestParam taskId : String) : TaskInfoDto {
-        var taskInfo = TaskInfoDto()
+        val taskInfo = TaskInfoDto()
         taskInfo.taskId = taskId
         taskInfo.totalSize = Int.MAX_VALUE
         taskInfo.currentSize = Int.MIN_VALUE
