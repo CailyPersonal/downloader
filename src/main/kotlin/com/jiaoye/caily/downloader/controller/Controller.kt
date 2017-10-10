@@ -1,10 +1,7 @@
 package com.jiaoye.caily.downloader.controller
 
 import com.jiaoye.caily.downloader.dto.TaskInfoDto
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 
 @RequestMapping
@@ -12,13 +9,18 @@ import org.springframework.web.bind.annotation.RestController
 class Controller{
 
     @PostMapping("/api/downloader")
-    fun submitUril(url : String) : String {
+    fun submitUril(@RequestParam url : String) : String {
         return "download mission confirmed" + url
     }
 
     @GetMapping("/api/downloader/query")
-    fun getProcess(taskId : String) : TaskInfoDto {
-        TODO("return task info")
+    fun getProcess(@RequestParam taskId : String) : TaskInfoDto {
+        var taskInfo = TaskInfoDto()
+        taskInfo.taskId = taskId
+        taskInfo.totalSize = Int.MAX_VALUE
+        taskInfo.currentSize = Int.MIN_VALUE
+
+        return taskInfo
     }
 
 }

@@ -1,12 +1,10 @@
 package com.jiaoye.caily.downloader.dto
 
-import lombok.Data
 
-@Data
 class TaskInfoDto {
 
-    private var taskId : String? = null
-    private var totalSize : Int = Int.MAX_VALUE
-    private var currentSize : Int = 0
+    public var taskId : String? = null
+    public var totalSize : Int = Int.MAX_VALUE
+    public var currentSize : Int = 0
 
 }
